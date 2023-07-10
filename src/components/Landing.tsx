@@ -1,6 +1,6 @@
 import { Image } from "@chakra-ui/image";
 import { Box, SimpleGrid, Heading } from "@chakra-ui/layout";
-import typing from "./../assets/vector/typing.webp";
+import { typing } from "../assets/images";
 import { Button } from "@chakra-ui/button";
 
 const Landing = () => {

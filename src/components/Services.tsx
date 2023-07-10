@@ -8,8 +8,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import coding from "./../assets/vector/coding.webp";
-import maintenance from "./../assets/vector/maintenance.webp";
+import { coding, maintenance } from "../assets/images";
 
 const Services = () => {
   const services = [
@@ -29,7 +28,7 @@ const Services = () => {
   return (
     <>
       <Heading as={"h2"} fontSize={"3xl"} textAlign={"center"}>
-        Service
+        OUR SERVICE
       </Heading>
       <Heading
         as={"h3"}
@@ -45,8 +44,8 @@ const Services = () => {
         spacing={3}
         alignItems={"center"}
       >
-        {services.map((service) => (
-          <Box boxShadow="md">
+        {services.map((service, index) => (
+          <Box boxShadow="md" key={index}>
             <Card>
               <CardBody>
                 <Image src={service.image} />
