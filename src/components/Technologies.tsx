@@ -45,6 +45,7 @@ const Technologies = () => {
           maxWidth={"900px"}
           textAlign={"center"}
           justifyContent={"center"}
+          margin={"auto"}
         >
           <SimpleGrid columns={{ base: 1, md: 2 }}>
             <Text>{lan.title}</Text>
