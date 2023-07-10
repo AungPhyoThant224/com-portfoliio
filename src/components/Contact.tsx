@@ -3,7 +3,6 @@ import {
   Button,
   FormControl,
   FormErrorMessage,
-  FormLabel,
   Heading,
   Image,
   Input,

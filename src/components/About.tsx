@@ -8,13 +8,13 @@ const About = () => {
       </Heading>
       <Box maxWidth={"700px"} margin={"auto"}>
         <Text textAlign={"center"}>
-          Varoon Vally, established in 2023, is a software development company
+          Varoon Valley, established in 2023, is a software development company
           specializing in web development. With a team of talented members, we
           excel in React and Laravel, while also possessing expertise in Vue,
           Flutter, Angular, Node.js, and more. Our goal is to create exceptional
           digital experiences by leveraging cutting-edge technologies. Partner
           with us for robust, scalable, and user-friendly web applications that
-          surpass expectations. Experience the power of Varoon Vally and
+          surpass expectations. Experience the power of Varoon Valley and
           transform your digital presence today.
         </Text>
       </Box>

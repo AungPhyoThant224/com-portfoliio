@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <>
+    <nav>
       <Grid templateColumns="repeat(2, 1fr)">
         <GridItem>
           <Link to={"/"}>
@@ -22,7 +22,7 @@ const NavBar = () => {
                 fontWeight={"bold"}
                 lineHeight={0.5}
               >
-                Vally
+                Valley
               </Text>
             </Box>
           </Link>
@@ -57,7 +57,7 @@ const NavBar = () => {
           </Grid>
         </GridItem>
       </Grid>
-    </>
+    </nav>
   );
 };
 
