@@ -3,6 +3,7 @@ import Landing from "../../components/Landing";
 import NavBar from "../../components/NavBar";
 import Section from "../../components/Section";
 import Services from "../../components/Services";
+import Team from "../../components/Team";
 import Technologies from "../../components/Technologies";
 
 const HomePage = () => {
@@ -22,6 +23,9 @@ const HomePage = () => {
       </Section>
       <Section maxWidth="1200px" background="green.100">
         <About />
+      </Section>
+      <Section maxWidth="1200px" background="gray.50">
+        <Team />
       </Section>
     </>
   );
