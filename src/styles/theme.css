@@ -1,0 +1,13 @@
+[theme="light"] {
+  --primary-color: #def7e5;
+  --secondary-color: #f5f5f5;
+  --primary-heading-color: #000;
+  --secondary-heading-color: rgba(0, 0, 0, 0.28);
+  --accent-heading-color: #92e3a9;
+  --text-color: rgba(0, 0, 0, 0.6);
+}
+
+[theme="dark"] {
+  --app-background-color: #000;
+  --text-color: whitesmoke;
+}
