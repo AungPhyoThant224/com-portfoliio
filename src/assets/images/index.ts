@@ -3,25 +3,25 @@ import person1 from "./avatars/person1.webp";
 import person2 from "./avatars/person2.webp";
 
 //Icons
-import facebook from "./icons/facebook.webp";
-import globe from "./icons/globe.webp";
-import linkedin from "./icons/linkedin.webp";
-import location from "./icons/location.webp";
-import mail from "./icons/mail.webp";
-import phone from "./icons/phone.webp";
-import twitter from "./icons/twitter.webp";
+import facebook from "./icons/facebook.svg";
+import globe from "./icons/globe.svg";
+import linkedin from "./icons/linkedin.svg";
+import location from "./icons/location.svg";
+import mail from "./icons/mail.svg";
+import phone from "./icons/phone.svg";
+import twitter from "./icons/twitter.svg";
 
 //Languages
-import angular from "./languages/angular.webp";
-import figma from "./languages/figma.webp";
-import illustrator from "./languages/illustrator.webp";
-import laravel from "./languages/laravel.webp";
-import mongodb from "./languages/mongodb.webp";
-import mysql from "./languages/mysql.webp";
-import nodejs from "./languages/nodejs.webp";
-import photoshop from "./languages/photoshop.webp";
-import react from "./languages/react.webp";
-import vuejs from "./languages/vuejs.webp";
+import angular from "./languages/angular.svg";
+import figma from "./languages/figma.svg";
+import illustrator from "./languages/illustrator.svg";
+import laravel from "./languages/laravel.svg";
+import mongodb from "./languages/mongodb.svg";
+import mysql from "./languages/mysql.svg";
+import nodejs from "./languages/nodejs.svg";
+import photoshop from "./languages/photoshop.svg";
+import react from "./languages/react.svg";
+import vuejs from "./languages/vuejs.svg";
 
 //Vectors
 import coding from "./vector/coding.webp";
