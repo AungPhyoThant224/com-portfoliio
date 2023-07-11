@@ -51,7 +51,7 @@ const Services = () => {
         style={{ alignItems: "stretch" }}
       >
         {services.map((service, index) => (
-          <Box boxShadow="md" key={index}>
+          <Box boxShadow="lg" key={index}>
             <Card height={"100%"}>
               <CardBody>
                 <Image

@@ -53,22 +53,33 @@ const Contact = () => {
       <Heading as={"h2"} fontSize={"3xl"} textAlign={"center"}>
         CONTACT US
       </Heading>
-      <Box boxShadow={"lg"} background={"white"}>
-        <SimpleGrid columns={{ base: 1, lg: 2 }}>
+      <Box
+        boxShadow={"lg"}
+        background={"white"}
+        margin={"auto"}
+        marginTop={10}
+        padding={5}
+        borderRadius={10}
+        maxWidth={"900px"}
+      >
+        <SimpleGrid columns={{ sm: 2 }} spacing={5}>
           <Box>
-            <Text>
+            <Text color={"blackAlpha.600"} fontSize={18}>
               We are excited to hear your idea and we are always open to discuss
               it! Tell us a bit more about you and the project you have in mind.
             </Text>
-            <Image src={message} />
-            <Text>
+            <Image src={message} width={300} height={300} />
+            <Text color={"blackAlpha.600"} fontSize={18}>
               Send us your request for a proposal, and we'll reply with the
               estimate.
             </Text>
           </Box>
           <Box>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <FormControl isInvalid={errors.name ? true : false} marginY={5}>
+              <FormControl
+                isInvalid={errors.name ? true : false}
+                marginBottom={5}
+              >
                 <Input
                   id="username"
                   placeholder="Your Name*"
