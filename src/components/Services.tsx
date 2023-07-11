@@ -27,30 +27,43 @@ const Services = () => {
   ];
   return (
     <>
-      <Heading as={"h2"} fontSize={"3xl"} textAlign={"center"}>
+      <Heading as={"h2"} fontSize={"3xl"} textAlign={"center"} paddingTop={10}>
         OUR SERVICE
       </Heading>
       <Heading
         as={"h3"}
-        fontSize={"xl"}
+        fontSize={"lg"}
+        fontWeight={"medium"}
         textAlign={"center"}
-        color={"blackAlpha.600"}
+        color={"blackAlpha.400"}
+        padding={2}
       >
         Our Diverse Range of Services
       </Heading>
 
       <SimpleGrid
         columns={{ base: 1, md: 2 }}
-        spacing={3}
+        spacing={5}
         alignItems={"center"}
+        maxWidth={{ base: "400px", md: "700px" }}
+        margin={"auto"}
+        paddingY={10}
+        style={{ alignItems: "stretch" }}
       >
         {services.map((service, index) => (
           <Box boxShadow="md" key={index}>
-            <Card>
+            <Card height={"100%"}>
               <CardBody>
-                <Image src={service.image} />
+                <Image
+                  src={service.image}
+                  width={300}
+                  height={300}
+                  margin={"auto"}
+                />
                 <Stack mt="6" spacing="3">
-                  <Heading size="md">{service.heading}</Heading>
+                  <Heading size="md" textAlign={"center"} color={"green.300"}>
+                    {service.heading}
+                  </Heading>
                   <Text>{service.description}</Text>
                 </Stack>
               </CardBody>
