@@ -6,7 +6,6 @@ const Landing = () => {
     <>
       <SimpleGrid
         columns={{ base: 1, md: 2 }}
-        paddingTop={{ base: 5, md: 0 }}
         spacing={3}
         alignItems={"center"}
       >

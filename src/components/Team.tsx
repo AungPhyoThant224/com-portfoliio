@@ -20,9 +20,11 @@ const Team = () => {
         OUR TEAM
       </Heading>
       <SimpleGrid
-        columns={{ sm: 1, md: 2, lg: 3 }}
-        gap={5}
-        alignContent={"center"}
+        paddingTop={10}
+        columns={{ sm: 2, md: 3, lg: 3 }}
+        spacing={8}
+        maxWidth={{ sm: "500px", md: "900px" }}
+        margin={"auto"}
       >
         {team.map((member, index) => (
           <Box
@@ -30,13 +32,15 @@ const Team = () => {
             boxShadow={"lg"}
             borderRadius={8}
             background={"white"}
-            maxWidth={"250px"}
             margin={"auto"}
             textAlign={"center"}
+            padding={5}
           >
             <Image src={member.picture} />
-            <Text>{member.name}</Text>
-            <Text>{member.position}</Text>
+            <Text fontSize={20} paddingTop={3} fontWeight={"medium"}>
+              {member.name}
+            </Text>
+            <Text color={"blackAlpha.600"}>{member.position}</Text>
           </Box>
         ))}
       </SimpleGrid>

@@ -27,7 +27,7 @@ const Services = () => {
   ];
   return (
     <>
-      <Heading as={"h2"} fontSize={"3xl"} textAlign={"center"} paddingTop={10}>
+      <Heading as={"h2"} fontSize={"3xl"} textAlign={"center"}>
         OUR SERVICE
       </Heading>
       <Heading
@@ -47,7 +47,7 @@ const Services = () => {
         alignItems={"center"}
         maxWidth={{ base: "400px", md: "700px" }}
         margin={"auto"}
-        paddingY={10}
+        paddingTop={10}
         style={{ alignItems: "stretch" }}
       >
         {services.map((service, index) => (

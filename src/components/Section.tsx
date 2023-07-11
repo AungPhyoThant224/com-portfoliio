@@ -13,7 +13,12 @@ const Section = ({ id, maxWidth, background, as, children }: Props) => {
   return (
     <>
       <Box id={id} backgroundColor={background} as={as}>
-        <Box maxWidth={maxWidth} margin={"auto"} paddingX={5}>
+        <Box
+          maxWidth={maxWidth}
+          margin={"auto"}
+          paddingX={5}
+          paddingY={as === "nav" ? 0 : 10}
+        >
           {children}
         </Box>
       </Box>

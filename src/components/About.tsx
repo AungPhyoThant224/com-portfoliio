@@ -3,10 +3,10 @@ import { Box, Heading, Text } from "@chakra-ui/react";
 const About = () => {
   return (
     <>
-      <Heading as={"h2"} fontSize={"3xl"} textAlign={"center"} paddingTop={10}>
+      <Heading as={"h2"} fontSize={"3xl"} textAlign={"center"}>
         ABOUT
       </Heading>
-      <Box maxWidth={"700px"} margin={"auto"} paddingTop={5} paddingBottom={10}>
+      <Box maxWidth={"700px"} margin={"auto"} paddingTop={5}>
         <Text textAlign={"center"} fontSize={"2xl"}>
           Varoon Valley, established in 2023, is a software development company
           specializing in web development. With a team of talented members, we

@@ -28,7 +28,7 @@ const Technologies = () => {
   ];
   return (
     <>
-      <Heading as={"h2"} fontSize={"3xl"} textAlign={"center"} paddingTop={10}>
+      <Heading as={"h2"} fontSize={"3xl"} textAlign={"center"}>
         TECHNOLOGIES
       </Heading>
       <Heading
@@ -41,12 +41,7 @@ const Technologies = () => {
       >
         Our technology expertise includes but is not limited to
       </Heading>
-      <Box
-        paddingTop={{ base: 5, md: 10 }}
-        paddingBottom={10}
-        margin={"auto"}
-        maxWidth={"900px"}
-      >
+      <Box paddingTop={{ base: 5, md: 10 }} margin={"auto"} maxWidth={"900px"}>
         {languages.map((lan, index) => (
           <Box
             key={index}
