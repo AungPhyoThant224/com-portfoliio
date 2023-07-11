@@ -57,19 +57,19 @@ const Contact = () => {
         boxShadow={"lg"}
         background={"white"}
         margin={"auto"}
-        marginTop={10}
+        marginTop={5}
         padding={5}
         borderRadius={10}
         maxWidth={"900px"}
       >
         <SimpleGrid columns={{ sm: 2 }} spacing={5}>
           <Box>
-            <Text color={"blackAlpha.600"} fontSize={18}>
+            <Text color={"blackAlpha.600"} fontSize={16}>
               We are excited to hear your idea and we are always open to discuss
               it! Tell us a bit more about you and the project you have in mind.
             </Text>
-            <Image src={message} width={300} height={300} />
-            <Text color={"blackAlpha.600"} fontSize={18}>
+            <Image src={message} width={300} height={300} objectFit={"cover"} />
+            <Text color={"blackAlpha.600"} fontSize={16}>
               Send us your request for a proposal, and we'll reply with the
               estimate.
             </Text>

@@ -25,6 +25,7 @@ const Team = () => {
         spacing={8}
         maxWidth={{ sm: "500px", md: "900px" }}
         margin={"auto"}
+        style={{ alignItems: "stretch" }}
       >
         {team.map((member, index) => (
           <Box
@@ -35,6 +36,7 @@ const Team = () => {
             margin={"auto"}
             textAlign={"center"}
             padding={5}
+            height={"100%"}
           >
             <Image src={member.picture} />
             <Text fontSize={20} paddingTop={3} fontWeight={"medium"}>

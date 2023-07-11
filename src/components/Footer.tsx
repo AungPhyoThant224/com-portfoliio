@@ -43,21 +43,26 @@ const Footer = () => {
 
   const quick = [
     { text: "Home", link: "#" },
-    { text: "Service", link: "#" },
-    { text: "About", link: "#" },
-    { text: "Contact", link: "#" },
+    { text: "Service", link: "#services" },
+    { text: "About", link: "#about" },
+    { text: "Contact", link: "#contact" },
   ];
 
   return (
     <footer>
-      <SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }}>
-        <Box>
+      <SimpleGrid
+        columns={{ sm: 2, md: 4, lg: 4 }}
+        maxWidth={{ base: "500px", md: "100%" }}
+        margin={"auto"}
+        spacing={3}
+      >
+        <Box textAlign={{ base: "left", lg: "center" }}>
           <Link href="#" style={{ textDecoration: "none" }}>
             <Box
               textAlign={"center"}
-              width={"fit-content"}
-              paddingTop={5}
-              paddingBottom={6}
+              width={{ base: "fit-content", lg: "100%" }}
+              paddingTop={{ base: 0, md: 8 }}
+              paddingBottom={3}
             >
               <Text fontSize={"xl"} color={"green.300"} fontWeight={"bold"}>
                 Varoon
@@ -75,35 +80,47 @@ const Footer = () => {
           <Text>&copy; 2023 Varoon Valley.</Text>
         </Box>
         <Box>
-          <Heading as={"h3"}>Contact</Heading>
-          {contact.map((con, idx) => (
-            <Link href={con.link} key={idx}>
-              <HStack>
-                <Image src={con.icon} />
-                <Text>{con.text}</Text>
-              </HStack>
-            </Link>
-          ))}
-        </Box>
-        <Box>
-          <Heading as={"h3"}>Social</Heading>
+          <Heading as={"h3"} fontSize={"2xl"}>
+            Social
+          </Heading>
           {social.map((soc, idx) => (
-            <Link href={soc.link} key={idx}>
-              <HStack>
-                <Image src={soc.icon} />
-                <Text>{soc.text}</Text>
-              </HStack>
-            </Link>
+            <Box key={idx} marginTop={2}>
+              <Link href={soc.link}>
+                <HStack>
+                  <Image src={soc.icon} />
+                  <Text>{soc.text}</Text>
+                </HStack>
+              </Link>
+            </Box>
           ))}
         </Box>
         <Box>
-          <Heading as={"h3"}>Quick Links</Heading>
+          <Heading as={"h3"} fontSize={"2xl"}>
+            Quick Links
+          </Heading>
           {quick.map((qui, idx) => (
-            <Link href={qui.link} key={idx}>
-              <HStack>
-                <Text>{qui.text}</Text>
-              </HStack>
-            </Link>
+            <Box key={idx} marginTop={2}>
+              <Link href={qui.link}>
+                <HStack>
+                  <Text>{qui.text}</Text>
+                </HStack>
+              </Link>
+            </Box>
+          ))}
+        </Box>
+        <Box>
+          <Heading as={"h3"} fontSize={"2xl"}>
+            Contact
+          </Heading>
+          {contact.map((con, idx) => (
+            <Box key={idx} marginTop={2}>
+              <Link href={con.link}>
+                <HStack>
+                  <Image src={con.icon} />
+                  <Text>{con.text}</Text>
+                </HStack>
+              </Link>
+            </Box>
           ))}
         </Box>
       </SimpleGrid>

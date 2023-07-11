@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import Aos from "aos";
 import About from "../../components/About";
 import Contact from "../../components/Contact";
 import Landing from "../../components/Landing";
@@ -9,6 +11,10 @@ import Technologies from "../../components/Technologies";
 import Footer from "../../components/footer";
 
 const HomePage = () => {
+  useEffect(() => {
+    Aos.init();
+  });
+
   return (
     <>
       <Section id="nav-bar" maxWidth="1200px" background="white" as={"nav"}>

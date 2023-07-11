@@ -52,7 +52,7 @@ const Services = () => {
       >
         {services.map((service, index) => (
           <Box boxShadow="lg" key={index}>
-            <Card height={"100%"}>
+            <Card height={"100%"} borderRadius={10}>
               <CardBody>
                 <Image
                   src={service.image}
@@ -64,7 +64,7 @@ const Services = () => {
                   <Heading size="md" textAlign={"center"} color={"green.300"}>
                     {service.heading}
                   </Heading>
-                  <Text>{service.description}</Text>
+                  <Text fontSize={16}>{service.description}</Text>
                 </Stack>
               </CardBody>
             </Card>

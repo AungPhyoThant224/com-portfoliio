@@ -7,7 +7,7 @@ const About = () => {
         ABOUT
       </Heading>
       <Box maxWidth={"700px"} margin={"auto"} paddingTop={5}>
-        <Text textAlign={"center"} fontSize={"2xl"}>
+        <Text textAlign={"center"} fontSize={"2xl"} color={"blackAlpha.600"}>
           Varoon Valley, established in 2023, is a software development company
           specializing in web development. With a team of talented members, we
           excel in React and Laravel, while also possessing expertise in Vue,
