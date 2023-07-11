@@ -28,37 +28,47 @@ const Technologies = () => {
   ];
   return (
     <>
-      <Heading as={"h2"} fontSize={"3xl"} textAlign={"center"}>
+      <Heading as={"h2"} fontSize={"3xl"} textAlign={"center"} paddingTop={10}>
         TECHNOLOGIES
       </Heading>
       <Heading
         as={"h3"}
-        fontSize={"xl"}
+        fontSize={"lg"}
+        fontWeight={"medium"}
         textAlign={"center"}
-        color={"blackAlpha.600"}
+        color={"blackAlpha.400"}
+        padding={2}
       >
         Our technology expertise includes but is not limited to
       </Heading>
-      {languages.map((lan, index) => (
-        <Box
-          key={index}
-          maxWidth={"900px"}
-          textAlign={"center"}
-          justifyContent={"center"}
-          margin={"auto"}
-        >
-          <SimpleGrid columns={{ base: 1, md: 2 }}>
-            <Text>{lan.title}</Text>
-            <HStack justifyContent={{ base: "center", md: "left" }}>
-              {lan.images.map((img, idx) => (
-                <Box width={"80px"} height={"80px"} key={idx}>
-                  <Image src={img} />
-                </Box>
-              ))}
-            </HStack>
-          </SimpleGrid>
-        </Box>
-      ))}
+      <Box
+        paddingTop={{ base: 5, md: 10 }}
+        paddingBottom={10}
+        margin={"auto"}
+        maxWidth={"900px"}
+      >
+        {languages.map((lan, index) => (
+          <Box
+            key={index}
+            textAlign={"center"}
+            justifyContent={"center"}
+            marginBottom={5}
+          >
+            <SimpleGrid columns={{ base: 1, md: 2 }}>
+              <Text lineHeight={"80px"} fontWeight={"bold"} fontSize={20}>
+                {lan.title}
+              </Text>
+              <HStack justifyContent={{ base: "center", md: "left" }} gap={5}>
+                {lan.images.map((img, idx) => (
+                  <Box width={"80px"} height={"80px"} key={idx}>
+                    <Image src={img} />
+                  </Box>
+                ))}
+              </HStack>
+            </SimpleGrid>
+          </Box>
+        ))}
+      </Box>
     </>
   );
 };
