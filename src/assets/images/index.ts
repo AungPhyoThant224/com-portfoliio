@@ -3,6 +3,7 @@ import person1 from "./avatars/person1.webp";
 import person2 from "./avatars/person2.webp";
 
 //Icons
+import close from "./icons/close.svg";
 import facebook from "./icons/facebook.svg";
 import globe from "./icons/globe.svg";
 import linkedin from "./icons/linkedin.svg";
@@ -37,6 +38,7 @@ export {
   person2,
 
   //Icons
+  close,
   facebook,
   globe,
   linkedin,

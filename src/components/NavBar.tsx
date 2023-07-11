@@ -1,9 +1,7 @@
 import {
   Box,
   Button,
-  CloseButton,
   Drawer,
-  DrawerCloseButton,
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
@@ -13,14 +11,21 @@ import {
   Image,
   Link,
   Text,
+  textDecoration,
   useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
-import { menu } from "../assets/images";
+import { close, menu } from "../assets/images";
 
 const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnref = React.useRef<HTMLButtonElement>(null);
+
+  const links = [
+    { title: "Services", link: "#services" },
+    { title: "About", link: "#about" },
+    { title: "Team", link: "#team" },
+    { title: "Contact", link: "#contact" },
+  ];
 
   return (
     <nav>
@@ -55,72 +60,66 @@ const NavBar = () => {
               alignItems={"center"}
               textAlign={"right"}
             >
-              <GridItem>
-                <Box>
-                  <Link href="#services">
-                    <Text>Services</Text>
-                  </Link>
-                </Box>
-              </GridItem>
-              <GridItem>
-                <Box>
-                  <Link href="#about">
-                    <Text>About</Text>
-                  </Link>
-                </Box>
-              </GridItem>
-              <GridItem>
-                <Box>
-                  <Link href="#team">
-                    <Text>Team</Text>
-                  </Link>
-                </Box>
-              </GridItem>
-              <GridItem>
-                <Box>
-                  <Link href="#contact">
-                    <Text>Contact</Text>
-                  </Link>
-                </Box>
-              </GridItem>
+              {links.map((link, idx) => (
+                <GridItem key={idx}>
+                  <Box>
+                    <Text>
+                      <Link
+                        href={link.link}
+                        fontSize={18}
+                        style={{ textDecoration: "none" }}
+                        _hover={{
+                          fontWeight: "500",
+                        }}
+                      >
+                        {link.title}
+                      </Link>
+                    </Text>
+                  </Box>
+                </GridItem>
+              ))}
             </Grid>
           </GridItem>
         </Hide>
         <Hide above="md">
           <Box textAlign={"right"} paddingTop={6}>
             <Button
-              ref={btnref}
               onClick={onOpen}
               colorScheme=""
               background={"green.300"}
               color={"white"}
               padding={3}
             >
-              <Image src={menu} height={"30px"} width={"30px"} />
+              <Image src={menu} height={6} width={6} />
             </Button>
           </Box>
           <Drawer
             onClose={onClose}
             isOpen={isOpen}
             placement="right"
-            finalFocusRef={btnref}
+            returnFocusOnClose={false}
           >
             <DrawerOverlay />
             <DrawerContent>
               <Box textAlign={"right"}>
                 <Button
-                  onClick={onClose}
-                  width={"50px"}
-                  height={"50px"}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onClose();
+                  }}
                   background={"transparent"}
+                  padding={3}
                 >
-                  <CloseButton size={"lg"} />
+                  <Image src={close} width={6} height={6} />
                 </Button>
               </Box>
-              <DrawerHeader>Home</DrawerHeader>
-              <DrawerHeader>Service</DrawerHeader>
-              <DrawerHeader>About</DrawerHeader>
-              <DrawerHeader>Contact</DrawerHeader>
+              {links.map((link, idx) => (
+                <DrawerHeader key={idx}>
+                  <Link href={link.link} style={{ textDecoration: "none" }}>
+                    {link.title}
+                  </Link>
+                </DrawerHeader>
+              ))}
             </DrawerContent>
           </Drawer>
         </Hide>
