@@ -17,10 +17,12 @@ const Landing = () => {
             turning your ideas into reality.
           </Heading>
           <Button
+            as={"a"}
             colorScheme=""
             background={"green.300"}
             color={"white"}
             marginY={2}
+            href="#contact"
           >
             Tell us your idea
           </Button>
