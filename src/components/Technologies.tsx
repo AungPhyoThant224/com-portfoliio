@@ -52,13 +52,17 @@ const Technologies = () => {
             key={index}
             textAlign={"center"}
             justifyContent={"center"}
-            marginBottom={5}
+            marginBottom={{ base: 8, md: 5 }}
           >
             <SimpleGrid columns={{ base: 1, md: 2 }}>
-              <Text lineHeight={"80px"} fontWeight={"bold"} fontSize={20}>
+              <Text
+                lineHeight={{ base: "50px", md: "80px" }}
+                fontWeight={"bold"}
+                fontSize={20}
+              >
                 {lan.title}
               </Text>
-              <HStack justifyContent={{ base: "center", md: "left" }} gap={5}>
+              <HStack justifyContent={{ base: "center", md: "left" }} gap={10}>
                 {lan.images.map((img, idx) => (
                   <Box width={"80px"} height={"80px"} key={idx}>
                     <Image src={img} />
