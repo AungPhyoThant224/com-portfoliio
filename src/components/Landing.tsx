@@ -1,13 +1,12 @@
-import { Image } from "@chakra-ui/image";
-import { Box, SimpleGrid, Heading } from "@chakra-ui/layout";
+import { SimpleGrid, Image, Heading, Button, Box } from "@chakra-ui/react";
 import { typing } from "../assets/images";
-import { Button } from "@chakra-ui/button";
 
 const Landing = () => {
   return (
     <>
       <SimpleGrid
         columns={{ base: 1, md: 2 }}
+        paddingTop={{ base: 5, md: 0 }}
         spacing={3}
         alignItems={"center"}
       >

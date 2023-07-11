@@ -8,6 +8,7 @@ import globe from "./icons/globe.svg";
 import linkedin from "./icons/linkedin.svg";
 import location from "./icons/location.svg";
 import mail from "./icons/mail.svg";
+import menu from "./icons/menu.svg";
 import phone from "./icons/phone.svg";
 import twitter from "./icons/twitter.svg";
 
@@ -41,6 +42,7 @@ export {
   linkedin,
   location,
   mail,
+  menu,
   phone,
   twitter,
 

@@ -1,12 +1,32 @@
-import { Box, Grid, GridItem, Text } from "@chakra-ui/layout";
-import { Link } from "react-router-dom";
+import {
+  Box,
+  Button,
+  CloseButton,
+  Drawer,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
+  Grid,
+  GridItem,
+  Hide,
+  Image,
+  Link,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react";
+import React from "react";
+import { menu } from "../assets/images";
 
 const NavBar = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnref = React.useRef<HTMLButtonElement>(null);
+
   return (
     <nav>
       <Grid templateColumns="repeat(2, 1fr)">
         <GridItem>
-          <Link to={"/"}>
+          <Link href="#" style={{ textDecoration: "none" }}>
             <Box
               textAlign={"center"}
               width={"fit-content"}
@@ -27,35 +47,83 @@ const NavBar = () => {
             </Box>
           </Link>
         </GridItem>
-        <GridItem>
-          <Grid
-            templateColumns="repeat(4, 1fr)"
-            height={"100%"}
-            alignItems={"center"}
-            textAlign={"right"}
+        <Hide below="md">
+          <GridItem>
+            <Grid
+              templateColumns="repeat(4, 1fr)"
+              height={"100%"}
+              alignItems={"center"}
+              textAlign={"right"}
+            >
+              <GridItem>
+                <Box>
+                  <Link href="#services">
+                    <Text>Services</Text>
+                  </Link>
+                </Box>
+              </GridItem>
+              <GridItem>
+                <Box>
+                  <Link href="#about">
+                    <Text>About</Text>
+                  </Link>
+                </Box>
+              </GridItem>
+              <GridItem>
+                <Box>
+                  <Link href="#team">
+                    <Text>Team</Text>
+                  </Link>
+                </Box>
+              </GridItem>
+              <GridItem>
+                <Box>
+                  <Link href="#contact">
+                    <Text>Contact</Text>
+                  </Link>
+                </Box>
+              </GridItem>
+            </Grid>
+          </GridItem>
+        </Hide>
+        <Hide above="md">
+          <Box textAlign={"right"} paddingTop={6}>
+            <Button
+              ref={btnref}
+              onClick={onOpen}
+              colorScheme=""
+              background={"green.300"}
+              color={"white"}
+              padding={3}
+            >
+              <Image src={menu} height={"30px"} width={"30px"} />
+            </Button>
+          </Box>
+          <Drawer
+            onClose={onClose}
+            isOpen={isOpen}
+            placement="right"
+            finalFocusRef={btnref}
           >
-            <GridItem>
-              <Box>
-                <Text>Home</Text>
+            <DrawerOverlay />
+            <DrawerContent>
+              <Box textAlign={"right"}>
+                <Button
+                  onClick={onClose}
+                  width={"50px"}
+                  height={"50px"}
+                  background={"transparent"}
+                >
+                  <CloseButton size={"lg"} />
+                </Button>
               </Box>
-            </GridItem>
-            <GridItem>
-              <Box>
-                <Text>Services</Text>
-              </Box>
-            </GridItem>
-            <GridItem>
-              <Box>
-                <Text>About</Text>
-              </Box>
-            </GridItem>
-            <GridItem>
-              <Box>
-                <Text>Contact</Text>
-              </Box>
-            </GridItem>
-          </Grid>
-        </GridItem>
+              <DrawerHeader>Home</DrawerHeader>
+              <DrawerHeader>Service</DrawerHeader>
+              <DrawerHeader>About</DrawerHeader>
+              <DrawerHeader>Contact</DrawerHeader>
+            </DrawerContent>
+          </Drawer>
+        </Hide>
       </Grid>
     </nav>
   );

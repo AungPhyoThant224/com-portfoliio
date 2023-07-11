@@ -11,28 +11,53 @@ import Footer from "../../components/footer";
 const HomePage = () => {
   return (
     <>
-      <Section maxWidth="1200px" background="white" as={"nav"}>
+      <Section id="nav-bar" maxWidth="1200px" background="white" as={"nav"}>
         <NavBar />
       </Section>
-      <Section maxWidth="1200px" background="gray.50" as={"section"}>
+      <Section
+        id="landing"
+        maxWidth="1200px"
+        background="gray.50"
+        as={"section"}
+      >
         <Landing />
       </Section>
-      <Section maxWidth="1200px" background="green.100" as={"section"}>
+      <Section
+        id="services"
+        maxWidth="1200px"
+        background="green.100"
+        as={"section"}
+      >
         <Services />
       </Section>
-      <Section maxWidth="1200px" background="gray.50" as={"section"}>
+      <Section
+        id="technologies"
+        maxWidth="1200px"
+        background="gray.50"
+        as={"section"}
+      >
         <Technologies />
       </Section>
-      <Section maxWidth="1200px" background="green.100" as={"section"}>
+      <Section
+        id="about"
+        maxWidth="1200px"
+        background="green.100"
+        as={"section"}
+      >
         <About />
       </Section>
-      <Section maxWidth="1200px" background="gray.50" as={"section"}>
+      <Section id="team" maxWidth="1200px" background="gray.50" as={"section"}>
         <Team />
       </Section>
-      <Section maxWidth="1200px" background="green.100" as={"section"}>
+      <Section
+        id="contact"
+        maxWidth="1200px"
+        background="green.100"
+        as={"section"}
+      >
         <Contact />
       </Section>
-      <Section maxWidth="1200px" background="gray.50" as={"footer"}>
+      <Section id="footer" maxWidth="1200px" background="gray.50" as={"footer"}>
         <Footer />
       </Section>
     </>
