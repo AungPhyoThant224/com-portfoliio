@@ -52,7 +52,7 @@ const Technologies = () => {
             <Box
               className="custom-box-shadow"
               data-aos="zoom-in-down"
-              data-aos-delay={idx * 300}
+              data-aos-delay={idx * 100}
               key={idx}
               background={cardWhite()}
               borderRadius={10}

@@ -11,6 +11,7 @@ import linkedin from "./icons/linkedin.svg";
 import location from "./icons/location.svg";
 import mail from "./icons/mail.svg";
 import menu from "./icons/menu.svg";
+import menuWhite from "./icons/menu-white.svg";
 import moon from "./icons/moon.svg";
 import phone from "./icons/phone.svg";
 import sunny from "./icons/sunny.svg";
@@ -49,6 +50,7 @@ export {
   location,
   mail,
   menu,
+  menuWhite,
   moon,
   phone,
   sunny,

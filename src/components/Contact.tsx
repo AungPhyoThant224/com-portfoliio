@@ -15,7 +15,7 @@ import { z } from "zod";
 import { FieldValues, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { phoneRegex } from "../utils/validator";
-import { cardWhite, text } from "../theme/colors";
+import { btnText, cardWhite, text } from "../theme/colors";
 
 const schema = z
   .object({
@@ -133,7 +133,7 @@ const Contact = () => {
               <Button
                 colorScheme=""
                 background={"green.300"}
-                color={"white"}
+                color={btnText()}
                 marginY={2}
                 isLoading={isSubmitting}
                 type="submit"

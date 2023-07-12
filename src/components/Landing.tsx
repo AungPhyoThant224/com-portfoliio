@@ -1,5 +1,6 @@
 import { SimpleGrid, Image, Heading, Button, Box } from "@chakra-ui/react";
 import { typing } from "../assets/images";
+import { btnText } from "../theme/colors";
 
 const Landing = () => {
   return (
@@ -23,7 +24,7 @@ const Landing = () => {
             as={"a"}
             colorScheme=""
             background={"green.300"}
-            color={"white"}
+            color={btnText()}
             marginY={2}
             href="#contact"
           >

@@ -12,6 +12,9 @@ const text = () => useColorModeValue("blackAlpha.600", "whiteAlpha.600");
 //Card
 const cardWhite = () => useColorModeValue("white", "gray.700");
 
+//Button
+const btnText = () => useColorModeValue("gray.50", "gray.800");
+
 export {
   //Background
   bgWhite,
@@ -24,4 +27,7 @@ export {
 
   //Card
   cardWhite,
+
+  //Button
+  btnText,
 };

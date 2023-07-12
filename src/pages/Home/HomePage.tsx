@@ -7,7 +7,7 @@ import Services from "../../components/Services";
 import Team from "../../components/Team";
 import Technologies from "../../components/Technologies";
 import Footer from "../../components/Footer";
-import { bgWhite, bgGray, bgGreen } from "../../theme/colors";
+import { bgWhite, bgGray } from "../../theme/colors";
 
 const HomePage = () => {
   return (
@@ -24,15 +24,15 @@ const HomePage = () => {
         <Landing />
       </Section>
       <Section
-        id="services"
+        id="technologies"
         maxWidth="1200px"
-        background={bgGreen()}
+        background={bgGray()}
         as={"section"}
       >
         <Technologies />
       </Section>
       <Section
-        id="technologies"
+        id="services"
         maxWidth="1200px"
         background={bgGray()}
         as={"section"}
@@ -42,7 +42,7 @@ const HomePage = () => {
       <Section
         id="about"
         maxWidth="1200px"
-        background={bgGreen()}
+        background={bgGray()}
         as={"section"}
       >
         <About />
@@ -53,7 +53,7 @@ const HomePage = () => {
       <Section
         id="contact"
         maxWidth="1200px"
-        background={bgGreen()}
+        background={bgGray()}
         as={"section"}
       >
         <Contact />
@@ -61,7 +61,7 @@ const HomePage = () => {
       <Section
         id="footer"
         maxWidth="1200px"
-        background={bgGray()}
+        background={bgWhite()}
         as={"footer"}
       >
         <Footer />
