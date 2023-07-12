@@ -9,6 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { coding, maintenance } from "../assets/images";
+import { cardWhite, secHeading } from "../theme/colors";
 
 const Services = () => {
   const services = [
@@ -35,7 +36,7 @@ const Services = () => {
         fontSize={"lg"}
         fontWeight={"medium"}
         textAlign={"center"}
-        color={"blackAlpha.400"}
+        color={secHeading()}
         padding={2}
       >
         Our Diverse Range of Services
@@ -63,7 +64,7 @@ const Services = () => {
               height={"100%"}
               borderRadius={10}
               variant={"filled"}
-              background={"white"}
+              background={cardWhite()}
             >
               <CardBody>
                 <Image

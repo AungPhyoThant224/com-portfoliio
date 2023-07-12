@@ -6,8 +6,6 @@ import {
   Heading,
   Image,
   Input,
-  NumberInput,
-  NumberInputField,
   SimpleGrid,
   Text,
   Textarea,
@@ -17,6 +15,7 @@ import { z } from "zod";
 import { FieldValues, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { phoneRegex } from "../utils/validator";
+import { cardWhite, text } from "../theme/colors";
 
 const schema = z
   .object({
@@ -56,7 +55,7 @@ const Contact = () => {
       <Box
         className="custom-box-shadow"
         data-aos="zoom-in"
-        background={"white"}
+        background={cardWhite()}
         margin={"auto"}
         marginTop={5}
         padding={5}
@@ -65,7 +64,7 @@ const Contact = () => {
       >
         <SimpleGrid columns={{ sm: 2 }} spacing={5}>
           <Box>
-            <Text color={"blackAlpha.600"} fontSize={16}>
+            <Text color={text()} fontSize={16}>
               We are excited to hear your idea and we are always open to discuss
               it! Tell us a bit more about you and the project you have in mind.
             </Text>
@@ -76,7 +75,7 @@ const Contact = () => {
               height={300}
               objectFit={"cover"}
             />
-            <Text color={"blackAlpha.600"} fontSize={16}>
+            <Text color={text()} fontSize={16}>
               Send us your request for a proposal, and we'll reply with the
               estimate.
             </Text>

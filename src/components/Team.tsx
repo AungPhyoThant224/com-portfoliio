@@ -1,5 +1,6 @@
 import { Box, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import { person1, person2 } from "../assets/images";
+import { cardWhite, text } from "../theme/colors";
 
 const Team = () => {
   const team = [
@@ -32,8 +33,8 @@ const Team = () => {
             className="custom-box-shadow pop-on-hover"
             data-aos="fade-up"
             key={index}
-            borderRadius={8}
-            background={"white"}
+            borderRadius={10}
+            background={cardWhite()}
             margin={"auto"}
             textAlign={"center"}
             padding={5}
@@ -43,7 +44,7 @@ const Team = () => {
             <Text fontSize={20} paddingTop={3} fontWeight={"medium"}>
               {member.name}
             </Text>
-            <Text color={"blackAlpha.600"}>{member.position}</Text>
+            <Text color={text()}>{member.position}</Text>
           </Box>
         ))}
       </SimpleGrid>

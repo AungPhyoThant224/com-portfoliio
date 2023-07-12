@@ -4,13 +4,16 @@ import person2 from "./avatars/person2.webp";
 
 //Icons
 import close from "./icons/close.svg";
+import closeWhite from "./icons/close-white.svg";
 import facebook from "./icons/facebook.svg";
 import globe from "./icons/globe.svg";
 import linkedin from "./icons/linkedin.svg";
 import location from "./icons/location.svg";
 import mail from "./icons/mail.svg";
 import menu from "./icons/menu.svg";
+import moon from "./icons/moon.svg";
 import phone from "./icons/phone.svg";
+import sunny from "./icons/sunny.svg";
 import twitter from "./icons/twitter.svg";
 
 //Languages
@@ -39,13 +42,16 @@ export {
 
   //Icons
   close,
+  closeWhite,
   facebook,
   globe,
   linkedin,
   location,
   mail,
   menu,
+  moon,
   phone,
+  sunny,
   twitter,
 
   //Languages

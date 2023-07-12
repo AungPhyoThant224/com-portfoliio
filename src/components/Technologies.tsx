@@ -18,6 +18,7 @@ import {
   react,
   vuejs,
 } from "../assets/images";
+import { cardWhite, secHeading } from "../theme/colors";
 
 const Technologies = () => {
   const languages = [
@@ -36,7 +37,7 @@ const Technologies = () => {
         fontSize={"lg"}
         fontWeight={"medium"}
         textAlign={"center"}
-        color={"blackAlpha.400"}
+        color={secHeading()}
         padding={2}
       >
         Our technology expertise includes but is not limited to
@@ -53,7 +54,7 @@ const Technologies = () => {
               data-aos="zoom-in-down"
               data-aos-delay={idx * 300}
               key={idx}
-              background={"white"}
+              background={cardWhite()}
               borderRadius={10}
               padding={5}
               textAlign={"center"}

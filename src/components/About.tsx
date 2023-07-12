@@ -1,4 +1,5 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
+import { text } from "../theme/colors";
 
 const About = () => {
   return (
@@ -7,7 +8,7 @@ const About = () => {
         ABOUT
       </Heading>
       <Box maxWidth={"700px"} margin={"auto"} paddingTop={5} data-aos="zoom-in">
-        <Text textAlign={"center"} fontSize={"2xl"} color={"blackAlpha.600"}>
+        <Text textAlign={"center"} fontSize={"2xl"} color={text()}>
           Varoon Valley, established in 2023, is a software development company
           specializing in web development. With a team of talented members, we
           excel in React and Laravel, while also possessing expertise in Vue,

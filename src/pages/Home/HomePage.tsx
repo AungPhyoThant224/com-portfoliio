@@ -7,17 +7,18 @@ import Services from "../../components/Services";
 import Team from "../../components/Team";
 import Technologies from "../../components/Technologies";
 import Footer from "../../components/Footer";
+import { bgWhite, bgGray, bgGreen } from "../../theme/colors";
 
 const HomePage = () => {
   return (
     <>
-      <Section id="nav-bar" maxWidth="1200px" background="white" as={"nav"}>
+      <Section id="nav-bar" maxWidth="1200px" background={bgWhite()} as={"nav"}>
         <NavBar />
       </Section>
       <Section
         id="landing"
         maxWidth="1200px"
-        background="gray.50"
+        background={bgGray()}
         as={"section"}
       >
         <Landing />
@@ -25,7 +26,7 @@ const HomePage = () => {
       <Section
         id="services"
         maxWidth="1200px"
-        background="green.100"
+        background={bgGreen()}
         as={"section"}
       >
         <Technologies />
@@ -33,7 +34,7 @@ const HomePage = () => {
       <Section
         id="technologies"
         maxWidth="1200px"
-        background="gray.50"
+        background={bgGray()}
         as={"section"}
       >
         <Services />
@@ -41,23 +42,28 @@ const HomePage = () => {
       <Section
         id="about"
         maxWidth="1200px"
-        background="green.100"
+        background={bgGreen()}
         as={"section"}
       >
         <About />
       </Section>
-      <Section id="team" maxWidth="1200px" background="gray.50" as={"section"}>
+      <Section id="team" maxWidth="1200px" background={bgGray()} as={"section"}>
         <Team />
       </Section>
       <Section
         id="contact"
         maxWidth="1200px"
-        background="green.100"
+        background={bgGreen()}
         as={"section"}
       >
         <Contact />
       </Section>
-      <Section id="footer" maxWidth="1200px" background="gray.50" as={"footer"}>
+      <Section
+        id="footer"
+        maxWidth="1200px"
+        background={bgGray()}
+        as={"footer"}
+      >
         <Footer />
       </Section>
     </>

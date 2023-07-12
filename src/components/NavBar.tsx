@@ -7,14 +7,16 @@ import {
   DrawerOverlay,
   Grid,
   GridItem,
+  HStack,
   Hide,
   Image,
   Link,
   Show,
   Text,
+  useColorMode,
   useDisclosure,
 } from "@chakra-ui/react";
-import { close, menu } from "../assets/images";
+import { close, closeWhite, menu, moon, sunny } from "../assets/images";
 
 const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -25,6 +27,8 @@ const NavBar = () => {
     { title: "Team", link: "#team" },
     { title: "Contact", link: "#contact" },
   ];
+
+  const { toggleColorMode, colorMode } = useColorMode();
 
   return (
     <nav>
@@ -54,7 +58,7 @@ const NavBar = () => {
         <Show above="md">
           <GridItem>
             <Grid
-              templateColumns="repeat(4, 1fr)"
+              templateColumns="repeat(5, 1fr)"
               height={"100%"}
               alignItems={"center"}
               textAlign={"right"}
@@ -77,6 +81,14 @@ const NavBar = () => {
                   </Box>
                 </GridItem>
               ))}
+              <GridItem>
+                <Image
+                  src={colorMode === "dark" ? sunny : moon}
+                  onClick={toggleColorMode}
+                  margin={"auto"}
+                  _hover={{ cursor: "pointer" }}
+                />
+              </GridItem>
             </Grid>
           </GridItem>
         </Show>
@@ -109,7 +121,12 @@ const NavBar = () => {
                   background={"transparent"}
                   padding={3}
                 >
-                  <Image src={close} width={6} height={6} alt="close" />
+                  <Image
+                    src={colorMode === "dark" ? closeWhite : close}
+                    width={6}
+                    height={6}
+                    alt="close"
+                  />
                 </Button>
               </Box>
               {links.map((link, idx) => (
@@ -125,6 +142,17 @@ const NavBar = () => {
                   </Link>
                 </DrawerHeader>
               ))}
+              <DrawerHeader>
+                <HStack
+                  onClick={toggleColorMode}
+                  _hover={{ cursor: "pointer" }}
+                >
+                  <Text>
+                    {colorMode === "dark" ? "Light Mode" : "Dark Mode"}
+                  </Text>
+                  <Image src={colorMode === "dark" ? sunny : moon} />
+                </HStack>
+              </DrawerHeader>
             </DrawerContent>
           </Drawer>
         </Hide>
