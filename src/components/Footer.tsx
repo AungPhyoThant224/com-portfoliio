@@ -87,7 +87,7 @@ const Footer = () => {
             <Box key={idx} marginTop={2}>
               <Link href={soc.link}>
                 <HStack>
-                  <Image src={soc.icon} />
+                  <Image src={soc.icon} alt={soc.text} />
                   <Text>{soc.text}</Text>
                 </HStack>
               </Link>
@@ -116,7 +116,7 @@ const Footer = () => {
             <Box key={idx} marginTop={2}>
               <Link href={con.link}>
                 <HStack>
-                  <Image src={con.icon} />
+                  <Image src={con.icon} alt={con.text} />
                   <Text>{con.text}</Text>
                 </HStack>
               </Link>

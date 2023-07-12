@@ -89,7 +89,8 @@ const NavBar = () => {
               color={"white"}
               padding={3}
             >
-              <Image src={menu} height={6} width={6} />
+              {""}
+              <Image src={menu} height={6} width={6} alt="menu" />
             </Button>
           </Box>
           <Drawer
@@ -108,7 +109,7 @@ const NavBar = () => {
                   background={"transparent"}
                   padding={3}
                 >
-                  <Image src={close} width={6} height={6} />
+                  <Image src={close} width={6} height={6} alt="close" />
                 </Button>
               </Box>
               {links.map((link, idx) => (

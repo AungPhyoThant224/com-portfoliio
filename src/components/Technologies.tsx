@@ -41,34 +41,40 @@ const Technologies = () => {
       >
         Our technology expertise includes but is not limited to
       </Heading>
-      <Box paddingTop={{ base: 5, md: 10 }} margin={"auto"} maxWidth={"900px"}>
-        {languages.map((lan, index) => (
-          <Box
-            data-aos="zoom-in-down"
-            data-aos-delay={index * 2}
-            key={index}
-            textAlign={"center"}
-            justifyContent={"center"}
-            marginBottom={{ base: 8, md: 5 }}
-          >
-            <SimpleGrid columns={{ base: 1, md: 2 }}>
-              <Text
-                lineHeight={{ base: "50px", md: "80px" }}
-                fontWeight={"bold"}
-                fontSize={20}
-              >
+      <Box
+        paddingTop={{ base: 5, md: 10 }}
+        margin={"auto"}
+        maxWidth={{ base: "500px", md: "900px" }}
+      >
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
+          {languages.map((lan, idx) => (
+            <Box
+              className="custom-box-shadow"
+              data-aos="zoom-in-down"
+              data-aos-delay={idx * 300}
+              key={idx}
+              background={"white"}
+              borderRadius={10}
+              padding={5}
+              textAlign={"center"}
+            >
+              <Text paddingBottom={5} fontWeight={"bold"} fontSize={20}>
                 {lan.title}
               </Text>
-              <HStack justifyContent={{ base: "center", md: "left" }} gap={10}>
+              <HStack
+                justifyContent={{ base: "center", md: "left" }}
+                gap={10}
+                style={{ justifyContent: "center" }}
+              >
                 {lan.images.map((img, idx) => (
                   <Box width={"80px"} height={"80px"} key={idx}>
-                    <Image src={img} />
+                    <Image src={img} alt={lan.title + idx} />
                   </Box>
                 ))}
               </HStack>
-            </SimpleGrid>
-          </Box>
-        ))}
+            </Box>
+          ))}
+        </SimpleGrid>
       </Box>
     </>
   );

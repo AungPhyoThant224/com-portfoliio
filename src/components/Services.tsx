@@ -45,23 +45,32 @@ const Services = () => {
         columns={{ base: 1, md: 2 }}
         spacing={5}
         alignItems={"center"}
-        maxWidth={{ base: "400px", md: "700px" }}
+        maxWidth={{ base: "400px", md: "750px" }}
         margin={"auto"}
-        paddingTop={10}
+        paddingY={10}
+        paddingX={30}
         style={{ alignItems: "stretch" }}
         overflowX={"hidden"}
       >
         {services.map((service, index) => (
           <Box
-            boxShadow="lg"
+            className="custom-box-shadow"
+            borderRadius={10}
             key={index}
             data-aos={index / 2 === 0 ? "fade-right" : "fade-left"}
           >
-            <Card height={"100%"} borderRadius={10}>
+            <Card
+              height={"100%"}
+              borderRadius={10}
+              variant={"filled"}
+              background={"white"}
+            >
               <CardBody>
                 <Image
+                  className="scale"
                   src={service.image}
-                  width={300}
+                  alt={service.heading}
+                  width={272}
                   height={300}
                   margin={"auto"}
                 />

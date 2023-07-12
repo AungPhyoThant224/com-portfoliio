@@ -54,8 +54,8 @@ const Contact = () => {
         CONTACT US
       </Heading>
       <Box
+        className="custom-box-shadow"
         data-aos="zoom-in"
-        boxShadow={"lg"}
         background={"white"}
         margin={"auto"}
         marginTop={5}
@@ -69,7 +69,13 @@ const Contact = () => {
               We are excited to hear your idea and we are always open to discuss
               it! Tell us a bit more about you and the project you have in mind.
             </Text>
-            <Image src={message} width={300} height={300} objectFit={"cover"} />
+            <Image
+              src={message}
+              alt="message"
+              width={300}
+              height={300}
+              objectFit={"cover"}
+            />
             <Text color={"blackAlpha.600"} fontSize={16}>
               Send us your request for a proposal, and we'll reply with the
               estimate.
@@ -96,14 +102,18 @@ const Contact = () => {
                   {errors.email && errors.email.message}
                 </FormErrorMessage>
               </FormControl>
-              <FormControl isInvalid={errors.name ? true : false} marginY={5}>
-                <NumberInput>
-                  <NumberInputField
-                    id="phone"
-                    placeholder="Phone"
-                    {...register("phone")}
-                  />
-                </NumberInput>
+              <FormControl isInvalid={errors.phone ? true : false} marginY={5}>
+                <Input
+                  id="phone"
+                  placeholder="Phone"
+                  {...register("phone")}
+                  onKeyDown={(e) =>
+                    !/[0-9]/.test(e.key) &&
+                    !/[+]/.test(e.key) &&
+                    e.key !== "Backspace" &&
+                    e.preventDefault()
+                  }
+                />
                 <FormErrorMessage>
                   {errors.phone && errors.phone.message}
                 </FormErrorMessage>

@@ -9,7 +9,11 @@ const Landing = () => {
         spacing={3}
         alignItems={"center"}
       >
-        <Box data-aos="fade-right">
+        <Box
+          data-aos="fade-right"
+          data-aos-duration="700"
+          data-aos-easing="linear"
+        >
           <Heading as={"h1"} fontSize={"4xl"}>
             We look forward to{" "}
             <span style={{ color: "#68D391" }}>collaborating with you</span> and
@@ -26,8 +30,13 @@ const Landing = () => {
             Tell us your idea
           </Button>
         </Box>
-        <Box data-aos="fade-left">
-          <Image src={typing} />
+        <Box
+          data-aos="fade-left"
+          data-aos-delay="600"
+          data-aos-duration="700"
+          data-aos-easing="linear"
+        >
+          <Image src={typing} className="bounce" alt="typing" />
         </Box>
       </SimpleGrid>
     </>

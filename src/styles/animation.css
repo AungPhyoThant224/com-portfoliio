@@ -1,0 +1,49 @@
+.bounce:hover {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: bounce;
+  animation-timing-function: linear;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.scale {
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-name: scale;
+  animation-timing-function: linear;
+  cursor: pointer;
+  animation-delay: 1s;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pop-on-hover:hover {
+  cursor: pointer;
+}
+
+.pop-on-hover:hover img {
+  transform: scale(1.1);
+  transition: 1s;
+}

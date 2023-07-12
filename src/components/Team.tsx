@@ -29,9 +29,9 @@ const Team = () => {
       >
         {team.map((member, index) => (
           <Box
+            className="custom-box-shadow pop-on-hover"
             data-aos="fade-up"
             key={index}
-            boxShadow={"lg"}
             borderRadius={8}
             background={"white"}
             margin={"auto"}
@@ -39,7 +39,7 @@ const Team = () => {
             padding={5}
             height={"100%"}
           >
-            <Image src={member.picture} />
+            <Image src={member.picture} alt={member.name} />
             <Text fontSize={20} paddingTop={3} fontWeight={"medium"}>
               {member.name}
             </Text>
