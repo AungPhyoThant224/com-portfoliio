@@ -54,6 +54,7 @@ const Contact = () => {
         CONTACT US
       </Heading>
       <Box
+        data-aos="zoom-in"
         boxShadow={"lg"}
         background={"white"}
         margin={"auto"}

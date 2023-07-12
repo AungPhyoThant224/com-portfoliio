@@ -29,6 +29,7 @@ const Team = () => {
       >
         {team.map((member, index) => (
           <Box
+            data-aos="fade-up"
             key={index}
             boxShadow={"lg"}
             borderRadius={8}

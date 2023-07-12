@@ -6,7 +6,7 @@ const About = () => {
       <Heading as={"h2"} fontSize={"3xl"} textAlign={"center"}>
         ABOUT
       </Heading>
-      <Box maxWidth={"700px"} margin={"auto"} paddingTop={5}>
+      <Box maxWidth={"700px"} margin={"auto"} paddingTop={5} data-aos="zoom-in">
         <Text textAlign={"center"} fontSize={"2xl"} color={"blackAlpha.600"}>
           Varoon Valley, established in 2023, is a software development company
           specializing in web development. With a team of talented members, we

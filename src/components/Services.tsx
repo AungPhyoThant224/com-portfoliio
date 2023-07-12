@@ -49,9 +49,14 @@ const Services = () => {
         margin={"auto"}
         paddingTop={10}
         style={{ alignItems: "stretch" }}
+        overflowX={"hidden"}
       >
         {services.map((service, index) => (
-          <Box boxShadow="lg" key={index}>
+          <Box
+            boxShadow="lg"
+            key={index}
+            data-aos={index / 2 === 0 ? "fade-right" : "fade-left"}
+          >
             <Card height={"100%"} borderRadius={10}>
               <CardBody>
                 <Image

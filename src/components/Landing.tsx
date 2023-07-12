@@ -1,6 +1,5 @@
 import { SimpleGrid, Image, Heading, Button, Box } from "@chakra-ui/react";
 import { typing } from "../assets/images";
-import "aos";
 
 const Landing = () => {
   return (
@@ -10,7 +9,7 @@ const Landing = () => {
         spacing={3}
         alignItems={"center"}
       >
-        <Box data-aos="fade-in">
+        <Box data-aos="fade-right">
           <Heading as={"h1"} fontSize={"4xl"}>
             We look forward to{" "}
             <span style={{ color: "#68D391" }}>collaborating with you</span> and
@@ -27,7 +26,7 @@ const Landing = () => {
             Tell us your idea
           </Button>
         </Box>
-        <Box>
+        <Box data-aos="fade-left">
           <Image src={typing} />
         </Box>
       </SimpleGrid>

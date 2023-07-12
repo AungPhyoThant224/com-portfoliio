@@ -44,6 +44,8 @@ const Technologies = () => {
       <Box paddingTop={{ base: 5, md: 10 }} margin={"auto"} maxWidth={"900px"}>
         {languages.map((lan, index) => (
           <Box
+            data-aos="zoom-in-down"
+            data-aos-delay={index * 2}
             key={index}
             textAlign={"center"}
             justifyContent={"center"}

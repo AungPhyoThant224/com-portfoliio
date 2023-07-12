@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import Aos from "aos";
 import About from "../../components/About";
 import Contact from "../../components/Contact";
 import Landing from "../../components/Landing";
@@ -8,13 +6,9 @@ import Section from "../../components/Section";
 import Services from "../../components/Services";
 import Team from "../../components/Team";
 import Technologies from "../../components/Technologies";
-import Footer from "../../components/footer";
+import Footer from "../../components/Footer";
 
 const HomePage = () => {
-  useEffect(() => {
-    Aos.init();
-  });
-
   return (
     <>
       <Section id="nav-bar" maxWidth="1200px" background="white" as={"nav"}>
@@ -34,7 +28,7 @@ const HomePage = () => {
         background="green.100"
         as={"section"}
       >
-        <Services />
+        <Technologies />
       </Section>
       <Section
         id="technologies"
@@ -42,7 +36,7 @@ const HomePage = () => {
         background="gray.50"
         as={"section"}
       >
-        <Technologies />
+        <Services />
       </Section>
       <Section
         id="about"

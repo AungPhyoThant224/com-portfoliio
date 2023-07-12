@@ -10,6 +10,7 @@ import {
   Hide,
   Image,
   Link,
+  Show,
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -50,7 +51,7 @@ const NavBar = () => {
             </Box>
           </Link>
         </GridItem>
-        <Hide below="md">
+        <Show above="md">
           <GridItem>
             <Grid
               templateColumns="repeat(4, 1fr)"
@@ -78,7 +79,7 @@ const NavBar = () => {
               ))}
             </Grid>
           </GridItem>
-        </Hide>
+        </Show>
         <Hide above="md">
           <Box textAlign={"right"} paddingTop={6}>
             <Button
@@ -101,8 +102,7 @@ const NavBar = () => {
             <DrawerContent>
               <Box textAlign={"right"}>
                 <Button
-                  onClick={(e) => {
-                    e.preventDefault();
+                  onClick={() => {
                     onClose();
                   }}
                   background={"transparent"}
@@ -113,7 +113,13 @@ const NavBar = () => {
               </Box>
               {links.map((link, idx) => (
                 <DrawerHeader key={idx}>
-                  <Link href={link.link} style={{ textDecoration: "none" }}>
+                  <Link
+                    href={link.link}
+                    style={{ textDecoration: "none" }}
+                    onClick={() => {
+                      onClose();
+                    }}
+                  >
                     {link.title}
                   </Link>
                 </DrawerHeader>
