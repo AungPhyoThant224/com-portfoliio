@@ -23,7 +23,6 @@
   animation-iteration-count: infinite;
   animation-name: scale;
   animation-timing-function: linear;
-  cursor: pointer;
   animation-delay: 1s;
 }
 
