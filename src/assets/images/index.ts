@@ -7,6 +7,7 @@ import close from "./icons/close.svg";
 import closeWhite from "./icons/close-white.svg";
 import facebook from "./icons/facebook.svg";
 import globe from "./icons/globe.svg";
+import info from "./icons/info.svg";
 import linkedin from "./icons/linkedin.svg";
 import location from "./icons/location.svg";
 import mail from "./icons/mail.svg";
@@ -31,6 +32,7 @@ import vuejs from "./languages/vuejs.svg";
 
 //Vectors
 import coding from "./vector/coding.webp";
+import fourOFour from "./vector/fourOFour.webp";
 import maintenance from "./vector/maintenance.webp";
 import message from "./vector/message.webp";
 import typing from "./vector/typing.webp";
@@ -46,6 +48,7 @@ export {
   closeWhite,
   facebook,
   globe,
+  info,
   linkedin,
   location,
   mail,
@@ -70,6 +73,7 @@ export {
 
   //Vectors
   coding,
+  fourOFour,
   maintenance,
   message,
   typing,
