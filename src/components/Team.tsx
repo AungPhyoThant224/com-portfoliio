@@ -1,22 +1,27 @@
-import { Box, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
-import { person1, person2 } from "../assets/images";
+import {
+  Box,
+  Heading,
+  Image,
+  SimpleGrid,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react";
 import { cardWhite, text } from "../theme/colors";
+import MemberMoreInfo from "./MemberMoreInfo";
+import { useState } from "react";
+import teamMembers from "../data/teamMembers";
 
 const Team = () => {
-  const team = [
-    { name: "Mohan Lar", position: "Founder/CEO", picture: person1 },
-    { name: "Gangadar", position: "Founder/CTO", picture: person1 },
-    { name: "Aung Phyo Thant", position: "Junior Developer", picture: person1 },
-    { name: "Chawbe Lar", position: "Junior Developer", picture: person1 },
-    {
-      name: "Soe Phyu Phyu Htun",
-      position: "Junior Developer",
-      picture: person2,
-    },
-    { name: "Thihan Win Htet", position: "Junior Developer", picture: person1 },
-  ];
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [clickedIdx, setClickIdx] = useState(0);
+  const team = teamMembers;
   return (
     <>
+      <MemberMoreInfo
+        isOpen={isOpen}
+        onClose={onClose}
+        data={team[clickedIdx]}
+      />
       <Heading as={"h2"} fontSize={"3xl"} textAlign={"center"}>
         OUR TEAM
       </Heading>
@@ -39,6 +44,10 @@ const Team = () => {
             textAlign={"center"}
             padding={5}
             height={"100%"}
+            onClick={() => {
+              setClickIdx(index);
+              onOpen();
+            }}
           >
             <Image src={member.picture} alt={member.name} />
             <Text fontSize={20} paddingTop={3} fontWeight={"medium"}>
