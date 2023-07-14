@@ -37,7 +37,13 @@ const Landing = () => {
           data-aos-duration="700"
           data-aos-easing="linear"
         >
-          <Image src={typing} className="bounce" alt="typing" />
+          <Image
+            src={typing}
+            width={"100%"}
+            height={"100%"}
+            className="bounce"
+            alt="typing"
+          />
         </Box>
       </SimpleGrid>
     </>

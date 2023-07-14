@@ -39,7 +39,16 @@ const ErrorPage = () => {
         background={bgGray()}
         as={"section"}
       >
-        <Image data-aos="zoom-in" src={fourOFour} margin={"auto"} width={620} />
+        <Box>
+          <Image
+            data-aos="zoom-in"
+            src={fourOFour}
+            alt="404"
+            width={620}
+            height={"100%"}
+            margin={"auto"}
+          />
+        </Box>
       </Section>
     </Box>
   );

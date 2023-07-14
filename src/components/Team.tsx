@@ -49,7 +49,14 @@ const Team = () => {
               onOpen();
             }}
           >
-            <Image src={member.picture} alt={member.name} />
+            <Box>
+              <Image
+                src={member.picture}
+                alt={member.name}
+                width={"100%"}
+                height={"100%"}
+              />
+            </Box>
             <Text fontSize={20} paddingTop={3} fontWeight={"medium"}>
               {member.name}
             </Text>

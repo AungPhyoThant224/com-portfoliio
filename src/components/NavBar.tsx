@@ -90,8 +90,11 @@ const NavBar = () => {
             <GridItem>
               <Image
                 src={colorMode === "dark" ? sunny : moon}
+                alt="colorMode"
                 onClick={toggleColorMode}
                 margin={"auto"}
+                width={"32px"}
+                height={"32px"}
                 _hover={{ cursor: "pointer" }}
               />
             </GridItem>

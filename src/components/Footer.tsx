@@ -94,7 +94,12 @@ const Footer = () => {
           <Box key={idx} marginTop={2}>
             <Link href={soc.link}>
               <HStack>
-                <Image src={soc.icon} alt={soc.text} />
+                <Image
+                  src={soc.icon}
+                  alt={soc.text}
+                  width={"24px"}
+                  height={"24px"}
+                />
                 <Text>{soc.text}</Text>
               </HStack>
             </Link>
@@ -123,7 +128,12 @@ const Footer = () => {
           <Box key={idx} marginTop={2}>
             <Link href={con.link}>
               <HStack>
-                <Image src={con.icon} alt={con.text} />
+                <Image
+                  src={con.icon}
+                  alt={con.text}
+                  width={"24px"}
+                  height={"24px"}
+                />
                 <Text
                   style={
                     con.styles

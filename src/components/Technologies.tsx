@@ -69,7 +69,12 @@ const Technologies = () => {
               >
                 {lan.images.map((img, idx) => (
                   <Box width={"80px"} height={"80px"} key={idx}>
-                    <Image src={img} alt={lan.title + idx} />
+                    <Image
+                      width={"100%"}
+                      height={"100%"}
+                      src={img}
+                      alt={lan.title + idx}
+                    />
                   </Box>
                 ))}
               </HStack>
