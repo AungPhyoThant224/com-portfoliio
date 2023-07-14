@@ -10,7 +10,7 @@ const ErrorPage = () => {
       <Section id="nav-bar" maxWidth="1200px" background={bgWhite()} as={"nav"}>
         <Grid templateColumns="repeat(2, 1fr)">
           <GridItem>
-            <Link to="/#services" style={{ textDecoration: "none" }}>
+            <Link to="/" style={{ textDecoration: "none" }}>
               <Box
                 textAlign={"center"}
                 width={"fit-content"}
