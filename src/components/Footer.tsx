@@ -84,7 +84,7 @@ const Footer = () => {
             </Text>
           </Box>
         </Link>
-        <Text>&copy; 2023 Varoon Valley.</Text>
+        <Text>&copy; {new Date().getFullYear()} Varoon Valley.</Text>
       </Box>
       <Box paddingTop={2}>
         <Heading as={"h3"} fontSize={"2xl"}>
